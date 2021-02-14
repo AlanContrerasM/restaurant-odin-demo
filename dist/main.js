@@ -1,0 +1,1 @@
+(()=>{"use strict";(e=>{console.log(e)})("HelloWorld");const e=((e="Hi Player")=>{let o=0,t="X",n=e;return{setChoice:e=>{t=e},getChoice:()=>t,addCounter:()=>{o++},getCounter:()=>o,getPlayer:()=>n}})("Alan");console.log(e.getPlayer()),document.body.appendChild(function(){const e=document.createElement("div");return e.innerHTML=_.join(["Hello","webpack"]," "),e}())})();
