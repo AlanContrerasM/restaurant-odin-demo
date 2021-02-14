@@ -70,6 +70,15 @@ nav ul li:active{
     background-color: #4b760e;
 }
 
+.activeNav:hover{
+    background-color: #4b760e;
+}
+.activeNav:active{
+    background-color: #4b760e;
+    transform: scale(1.1);
+}
+
+
 main{
     grid-area: main;
     background-color: #4b760e;
