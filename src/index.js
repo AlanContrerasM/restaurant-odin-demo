@@ -3,6 +3,8 @@
 import {DisplayController} from './myModule.js';
 import {home} from './home.js';
 import {menu} from './menu.js';
+import {about} from './about.js';
+import {contact} from './contact.js';
 
 
 
@@ -50,6 +52,7 @@ let createNavListeners = () =>{
       contactNav.classList.remove("activeNav");
 
       DisplayController.emptyContainer();
+      about.createAboutElements();
   })
 
   contactNav.addEventListener("click", (e) =>{
@@ -60,6 +63,7 @@ let createNavListeners = () =>{
       homeNav.classList.remove("activeNav");
 
       DisplayController.emptyContainer();
+      contact.createContactElements();
   })
 
 }
