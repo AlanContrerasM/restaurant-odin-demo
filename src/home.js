@@ -7,6 +7,7 @@ const home = (()=>{
 
         const mainHomeContainer = document.createElement("div");
         mainHomeContainer.setAttribute("id", "mainHomeContainer");
+        mainHomeContainer.classList.add("burgerBackground")
 
         const homeFirst = document.createElement("div");
         const homeSecond = document.createElement("div");

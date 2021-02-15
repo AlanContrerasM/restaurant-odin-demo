@@ -2,6 +2,7 @@
 //import _ from 'lodash';//optional, must run npm install --save lodash
 import {DisplayController} from './myModule.js';
 import {home} from './home.js';
+import {menu} from './menu.js';
 
 
 
@@ -38,6 +39,7 @@ let createNavListeners = () =>{
       contactNav.classList.remove("activeNav");
 
       DisplayController.emptyContainer();
+      menu.createMenuElements();
   })
 
   aboutNav.addEventListener("click", (e) =>{
