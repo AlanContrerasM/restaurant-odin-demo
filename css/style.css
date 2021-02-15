@@ -116,6 +116,39 @@ footer a{
 }
 
 
+
+#mainHomeContainer{
+    height: 100%;
+    background-image: url(../media/IMG_9680-2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left . right";
+    /* with this place items we will make the divs be smaller and not stretch */
+    place-items: center;
+}
+
+.floating-quote{
+    background-color: #6669;
+    border-radius: 20px;
+    margin: 2em;
+    padding: 4em 2em;
+}
+#homeFirst{
+    grid-area: left;
+    text-align: left;
+    display: grid;
+    align-items: center;
+}
+#homeSecond{
+    grid-area: right;
+    text-align: right;
+    display: grid;
+    align-items: center;
+}
+
+
 /* for tablets */
 @media only screen and(max-width: 1024px) {
 }
