@@ -8,45 +8,7 @@ const DisplayController  = (()=>{
     //set popup to visible
     let _showPopUp = (something)=>{ return prompt(something); }
 
-    let createNavListeners = () =>{
-        const homeNav = document.querySelector("#homeNav");
-        const menuNav = document.querySelector("#menuNav");
-        const aboutNav = document.querySelector("#aboutNav");
-        const contactNav = document.querySelector("#contactNav");
-
-        homeNav.addEventListener("click", (e) =>{
-            e.target.classList.add("activeNav");
-
-            menuNav.classList.remove("activeNav");
-            aboutNav.classList.remove("activeNav");
-            contactNav.classList.remove("activeNav");
-        })
-
-        menuNav.addEventListener("click", (e) =>{
-            e.target.classList.add("activeNav");
-
-            homeNav.classList.remove("activeNav");
-            aboutNav.classList.remove("activeNav");
-            contactNav.classList.remove("activeNav");
-        })
-
-        aboutNav.addEventListener("click", (e) =>{
-            e.target.classList.add("activeNav");
-
-            homeNav.classList.remove("activeNav");
-            menuNav.classList.remove("activeNav");
-            contactNav.classList.remove("activeNav");
-        })
-
-        contactNav.addEventListener("click", (e) =>{
-            e.target.classList.add("activeNav");
-
-            menuNav.classList.remove("activeNav");
-            aboutNav.classList.remove("activeNav");
-            homeNav.classList.remove("activeNav");
-        })
-
-    }
+    
 
     let _createHeader = () =>{
         const header = document.createElement("header");
@@ -113,6 +75,11 @@ const DisplayController  = (()=>{
         return footer;
     }
 
+    const emptyContainer = () =>{
+        const mainDiv = document.querySelector("main");
+        mainDiv.innerHTML = "";
+    }
+
     let createBasicDomStructure = () =>{
         
         container.appendChild(_createHeader());
@@ -122,7 +89,7 @@ const DisplayController  = (()=>{
         container.appendChild(_createFooter());
     }
 
-    return {createBasicDomStructure, createNavListeners}
+    return {createBasicDomStructure, emptyContainer}
 })();
 
 
